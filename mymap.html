@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>abdo last project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<div id="mylist">
+    <h2>The Position of any Place</h2>
+    <div class="form">
+        <input type="text" placeholder="Location" data-bind="textInput: LocationInputName">
+        <input type="button" value="Filter" data-bind="click: GetFilterPlaces">
+    </div>
+    <ul class="places" data-bind="foreach:LocationList">
+        <li data-bind="text:placeName , visible:visiable , click: ActionOCliclkMarker"></li>
+    </ul>
+    <div class="apiinfo">
+        <h3 class="CityName" >The City Name</h3>
+        <p class="country" >The Country Name</p>
+        <a href="#" class="facebook" >FaceBook</a>
+        <br>
+        <p class="phone" >The Phone</p>
+    </div>
+</div>
+
+<div id="mymap"></div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/Knockout-3.4.2.js"></script>
+<script src="js/MapApp.js"></script>
+<script async defer src="http://maps.googleapis.com/maps/api/js?libraries=places
+    &key=AIzaSyDLfUZRAhGbaI4vnKZmWE9Dz0K-y9-42V8&v=3&callback=initMap" onerror="ErrorMapHandel()"></script>
+
+</html>
